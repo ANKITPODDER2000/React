@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@1,200;1,300&display=swap');
+.form-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form-inner-container {
+	position: relative;
+	width: 500px;
+	padding: 30px 40px;
+	background-color: #0002;
+	backdrop-filter: blur(50px);
+	box-shadow: 10px 10px 25px #0005;
+}
+.form-inner-container h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-family: 'Ephesis', cursive;
+}
+.form-inner-container input,
+.form-inner-container textarea {
+	position: relative;
+	display: block;
+	width: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #0002;
+	background-color: #0001;
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 16px;
+	margin: 20px 0;
+	font-family: 'Poppins', sans-serif;
+}
+.form-inner-container textarea {
+	height: 130px;
+	resize: none;
+}
+.form-inner-container input.btn {
+	cursor: pointer;
+}
+::placeholder {
+	color: #fff5;
+}

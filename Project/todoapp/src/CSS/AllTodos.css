@@ -10,8 +10,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 .todo-box {
 	position: relative;
 	width: 400px;
+	background-color: chartreuse;
 }

@@ -9,15 +9,15 @@ class Header extends Component {
 				<nav>
 					<li>
 						<p>About</p>
-						<i class="fas fa-lightbulb" />
+						<i className="fas fa-lightbulb" />
 					</li>
 					<li>
 						<p>Calender</p>
-						<i class="far fa-calendar-alt" />
+						<i className="far fa-calendar-alt" />
 					</li>
 					<li>
 						<p>Logout</p>
-						<i class="fas fa-sign-out-alt" />
+						<i className="fas fa-sign-out-alt" />
 					</li>
 				</nav>
 			</div>

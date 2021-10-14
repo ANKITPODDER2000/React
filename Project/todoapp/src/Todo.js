@@ -9,14 +9,14 @@ class Todo extends Component {
 			<div className="todo">
 				<p>{todo.title}</p>
 				<div>
-					<Link to={`/todo/${todo.Key}`}>
-						<i class="fas fa-chevron-right" />
+					<Link to={{ pathname: `/todo/${todo.Key}`, data: todo }}>
+						<i className="fas fa-chevron-right" />
 					</Link>
 					<span className="check">
-						<i class="fas fa-check" />
+						<i className="fas fa-check" />
 					</span>
 					<span className="bin">
-						<i class="fas fa-trash" />
+						<i className="fas fa-trash" />
 					</span>
 				</div>
 			</div>

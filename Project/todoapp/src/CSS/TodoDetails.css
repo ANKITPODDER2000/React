@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@1,200;1,300&display=swap');
+.todo-details {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+}
+.todo-con {
+	position: relative;
+	width: 70%;
+	padding: 30px;
+	background-color: #fff2;
+	backdrop-filter: blur(50px);
+	box-shadow: 0 25px 25px #0005;
+}
+.todo-con h1 {
+	font-family: 'Ephesis', cursive;
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+.todo-con p.cont {
+	font-size: 15px;
+	line-height: 22px;
+	margin-bottom: 15px;
+}
+.todo-con p.sub span {
+	font-size: 16px;
+	font-weight: bolder;
+}
+.todo-con p.sub-date {
+	position: absolute;
+	top: 45px;
+	right: 30px;
+	color: rgba(0, 0, 0, 0.274);
+	font-weight: bolder;
+}
+.todo-details button {
+	margin-top: 20px;
+	padding: 10px 30px;
+	border: none;
+	background: none;
+	background-color: #fff2;
+	/* backdrop-filter: blur(50px); */
+	cursor: pointer;
+	box-shadow: 10px 10px 25px #0002;
+	font-weight: bolder;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: 'Poppins', sans-serif;
+}
