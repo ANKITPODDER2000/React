@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@1,200;1,300&display=swap');
 * {
 	margin: 0;
 	padding: 0;
@@ -15,4 +16,19 @@
 .todo-box {
 	position: relative;
 	width: 400px;
+}
+
+.container a {
+	position: relative;
+	width: 400px;
+	background: #fff3;
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	backdrop-filter: blur(50px);
+	box-shadow: 10px 10px 20px #0003;
+	color: black;
 }

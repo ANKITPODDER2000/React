@@ -33,7 +33,10 @@ class AllTodos extends Component {
 			show = (
 				<div className="container">
 					<div className="todo-box">{todos.map((x) => <Todo key={x.Key} todo={x} />)}</div>
-					<Link to="/todo/add-todo">Add Todo</Link>
+					<Link to="/todo/add-todo" className="add-todo-btn">
+						Add Todo
+						<i style={{ marginLeft: 20 }} className="fas fa-edit" />
+					</Link>
 				</div>
 			);
 		} else {
