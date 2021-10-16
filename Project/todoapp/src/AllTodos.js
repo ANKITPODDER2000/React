@@ -8,7 +8,7 @@ class AllTodos extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			todos: null
+			todos: []
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -32,9 +32,8 @@ class AllTodos extends Component {
 	}
 	render() {
 		let todos = this.state.todos;
-		let show = <div />;
-		if (todos !== null) {
-			show = (
+		return (
+			<div>
 				<div className="container">
 					<div className="todo-box">
 						{todos.map((x) => <Todo key={x.Key} todo={x} handleChange={this.handleChange} />)}
@@ -44,17 +43,8 @@ class AllTodos extends Component {
 						<i style={{ marginLeft: 20 }} className="fas fa-edit" />
 					</Link>
 				</div>
-			);
-		} else {
-			show = (
-				<div className="container">
-					<div className="todo-box">
-						<h1>Loading ...</h1>
-					</div>
-				</div>
-			);
-		}
-		return <div>{show}</div>;
+			</div>
+		);
 	}
 }
 

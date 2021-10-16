@@ -13,6 +13,14 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	transition: 0.5s;
+}
+.todo.done {
+	background-color: #fff5;
+}
+.todo.done p {
+	transition: 0.4s;
+	text-decoration: line-through;
 }
 .todo div {
 	display: flex;
@@ -36,5 +44,5 @@
 }
 .todo div span.check {
 	color: #fff;
-	background-color: green;
+	background-color: #00f600;
 }
