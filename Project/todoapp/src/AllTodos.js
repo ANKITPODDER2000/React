@@ -10,9 +10,9 @@ class AllTodos extends Component {
 		this.state = {
 			todos: null
 		};
+		this.handleChange = this.handleChange.bind(this);
 	}
-	componentDidMount() {
-		console.log('start');
+	handleChange() {
 		let reqOptions = {
 			url: `http://127.0.0.1:8000/todo`,
 			method: 'GET',
@@ -26,13 +26,19 @@ class AllTodos extends Component {
 			})
 			.catch((err) => console.log(err));
 	}
+	componentDidMount() {
+		// console.log('start');
+		this.handleChange();
+	}
 	render() {
 		let todos = this.state.todos;
 		let show = <div />;
 		if (todos !== null) {
 			show = (
 				<div className="container">
-					<div className="todo-box">{todos.map((x) => <Todo key={x.Key} todo={x} />)}</div>
+					<div className="todo-box">
+						{todos.map((x) => <Todo key={x.Key} todo={x} handleChange={this.handleChange} />)}
+					</div>
 					<Link to="/todo/add-todo" className="add-todo-btn">
 						Add Todo
 						<i style={{ marginLeft: 20 }} className="fas fa-edit" />

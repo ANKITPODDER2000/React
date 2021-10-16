@@ -12,6 +12,7 @@ class Todo(BaseModel):
 	givenDate : Optional[str] = str(datetime.now().strftime('%Y-%m-%d'))
 	submittedBy : str
 	content : str
+	isDone : Optional[bool] = False
 
 todos = []
 
@@ -32,6 +33,15 @@ def home():
 @app.get("/todo")
 def get_alltodo():
     return todos
+
+@app.get("/todo/toogle-done/{Key}")
+def toggleDone(Key : str):
+	for it in todos:
+		if it.Key == Key:
+			it.isDone = not it.isDone
+			return it
+	return {"error" : "No Data "}
+
 
 @app.post("/todo/add-todo")
 def add_todo(todo : Todo):

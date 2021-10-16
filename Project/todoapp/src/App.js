@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TodoFrame from './TodoFrame';
 import Login from './Login';
 import TodoDetails from './TodoDetails';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import AddTodo from './AddTodo';
 import Header from './Header';
 import './App.css';
