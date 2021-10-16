@@ -6,7 +6,7 @@ from pydantic import BaseModel
 import uuid
 
 class Todo(BaseModel):
-	Key : Optional[str] = str(uuid.uuid4())
+	Key : str
 	title : str
 	givenBy : str
 	givenDate : Optional[str] = str(datetime.now().strftime('%Y-%m-%d'))
@@ -35,7 +35,7 @@ def get_alltodo():
 
 @app.post("/todo/add-todo")
 def add_todo(todo : Todo):
-	print(type(todo.Key))
+	print(todo)
 	for i in range(len(todos)):
 		if todos[i].Key == todo.Key:
 			todos[i] = todo

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './CSS/TodoDetails.css';
 
 class TodoDetails extends Component {
@@ -15,9 +16,9 @@ class TodoDetails extends Component {
 					</p>
 					{/* <p>Given Date : {cont.givenDate.toDateString()}</p> */}
 					<p className="sub-date">{new Date(cont.submittedBy).toDateString()}</p>
-					<button>
+					<Link to={{ pathname: `/todo/${cont.Key}/edit`, data: cont }}>
 						Edit <i style={{ marginLeft: 5 }} className="fas fa-pen" />
-					</button>
+					</Link>
 				</div>
 			</div>
 		);

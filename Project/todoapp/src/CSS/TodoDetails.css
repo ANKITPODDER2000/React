@@ -37,7 +37,8 @@
 	color: rgba(0, 0, 0, 0.274);
 	font-weight: bolder;
 }
-.todo-details button {
+.todo-details a {
+	display: inline-block;
 	margin-top: 20px;
 	padding: 10px 30px;
 	border: none;
@@ -50,4 +51,6 @@
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	color: #000;
 }

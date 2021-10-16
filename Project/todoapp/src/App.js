@@ -31,6 +31,7 @@ class App extends Component {
 							</Route>
 							<Route exact path="/todo/add-todo" component={AddTodo} />
 							<Route exact path="/todo/:id" component={TodoDetails} />
+							<Route exact path="/todo/:id/edit" component={AddTodo} />
 						</Switch>
 					</BrowserRouter>
 				</div>

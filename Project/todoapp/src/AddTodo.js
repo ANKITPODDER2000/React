@@ -5,11 +5,14 @@ import './CSS/AddTodo.css';
 class AddTodo extends Component {
 	constructor(props) {
 		super(props);
+		let todo = this.props.location.data;
+		// console.log(todo);
 		this.state = {
-			title: '',
-			description: '',
-			givenBy: '',
-			submittedBy: ''
+			title: todo === undefined ? '' : todo.title,
+			description: todo === undefined ? '' : todo.content,
+			givenBy: todo === undefined ? '' : todo.givenBy,
+			submittedBy: todo === undefined ? '' : todo.submittedBy,
+			Key: todo === undefined ? 'key' : todo.Key
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -18,7 +21,8 @@ class AddTodo extends Component {
 			title: this.state.title,
 			givenBy: this.state.givenBy,
 			content: this.state.description,
-			submittedBy: this.state.submittedBy
+			submittedBy: this.state.submittedBy,
+			Key: this.state.Key
 		};
 		axios
 			.post('http://127.0.0.1:8000/todo/add-todo', content)
@@ -36,7 +40,7 @@ class AddTodo extends Component {
 		return (
 			<div className="form-container">
 				<form className="form-inner-container" onSubmit={this.handleSubmit}>
-					<h1>Add Todo</h1>
+					<h1>{this.props.location.data === undefined ? 'Add Todo' : 'Edit Todo'}</h1>
 					<input
 						type="text"
 						placeholder="Todo Title"
