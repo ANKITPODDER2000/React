@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@1,200;1,300&display=swap');
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 .header {
 	position: relative;
@@ -26,13 +28,17 @@
 	justify-content: center;
 	align-items: center;
 }
-.header nav li {
+.header nav li,
+.header nav a {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	margin-right: 30px;
+	color: black;
+	text-decoration: none;
 }
-.header nav li p {
+.header nav li p,
+.header nav a p {
 	margin-right: 10px;
 	font-size: 19px;
 	line-height: 19px;

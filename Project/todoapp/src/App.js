@@ -20,20 +20,18 @@ class App extends Component {
 			<div className="app-container">
 				<Header />
 				<div className="inner-container">
-					<BrowserRouter>
-						<Switch>
-							<Route exact path="/">
-								{this.state.login ? <Redirect to="/todo" /> : <Redirect to="/login" />}
-							</Route>
-							<Route exact path="/login" component={Login} />
-							<Route exact path="/todo">
-								{this.state.login ? <TodoFrame /> : <Redirect to="/login" />}
-							</Route>
-							<Route exact path="/todo/add-todo" component={AddTodo} />
-							<Route exact path="/todo/:id" component={TodoDetails} />
-							<Route exact path="/todo/:id/edit" component={AddTodo} />
-						</Switch>
-					</BrowserRouter>
+					<Switch>
+						<Route exact path="/">
+							{this.state.login ? <Redirect to="/todo" /> : <Redirect to="/login" />}
+						</Route>
+						<Route exact path="/login" component={Login} />
+						<Route exact path="/todo">
+							{this.state.login ? <TodoFrame /> : <Redirect to="/login" />}
+						</Route>
+						<Route exact path="/todo/add-todo" component={AddTodo} />
+						<Route exact path="/todo/:id" component={TodoDetails} />
+						<Route exact path="/todo/:id/edit" component={AddTodo} />
+					</Switch>
 				</div>
 			</div>
 		);
